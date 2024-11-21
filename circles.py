@@ -35,7 +35,7 @@ class Circle:
 
         dx = other.pt.x - self.pt.x
         dy = other.pt.y - self.pt.y
-        factor = (new_radius - self.radius) / distance
+        factor = (new_radius - self.radius) / distance if distance != 0 else 0
         new_x = self.pt.x + dx * factor
         new_y = self.pt.y + dy * factor
         return Circle(new_x, new_y, new_radius)
