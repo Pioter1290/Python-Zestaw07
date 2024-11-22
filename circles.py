@@ -117,6 +117,13 @@ class TestCircle(unittest.TestCase):
         self.assertEqual(covered_circle3.pt.y, 0)
         self.assertEqual(covered_circle3.radius, 2.5)
 
+        circle7 = Circle(-2, 0, 3)
+        circle8 = Circle(1, 4, 3)
+        covered_circle4 = circle7.cover(circle8)
+        self.assertEqual(covered_circle4.pt.x, -0.5)
+        self.assertEqual(covered_circle4.pt.y, 2)
+        self.assertEqual(covered_circle4.radius, 5.5)
+
 
 
 
